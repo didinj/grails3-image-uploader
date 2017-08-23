@@ -18,7 +18,7 @@ class ApiController {
   				ftype="jpg"
   			def fname = file.getOriginalFilename()+"."+ftype
   			def webRootDir = servletContext.getRealPath("/")
-  			def userDir = new File(webRootDir, "/images")
+  			def userDir = new File(webRootDir, "/images/")
   			userDir.mkdirs()
   			file.transferTo(new File(userDir, fname))
 
